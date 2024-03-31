@@ -1,0 +1,1132 @@
+:root {
+  --primary: #be98ff;
+  --sekunder: #ced6ff;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--primary);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #ced6ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-jam {
+  overflow: hidden;
+  margin: 1px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  position: fixed;
+  padding-bottom: 0.3rem;
+}
+
+.navbar .navbar-phone-only h1 {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  font-size: 2rem;
+  background-color: #ced6ff;
+  border-radius: 20px;
+}
+
+.navbar .navbar-nav {
+  margin-left: 40%;
+}
+
+.navbar .navbar-nav a {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 1rem;
+  transition: 0.3s;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #fff;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.navbar .navbar-extra {
+  padding-left: 20%;
+}
+
+.navbar .navbar-extra a {
+  color: var(--primary);
+  margin: 0 0.3rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--sekunder);
+}
+
+/* Hamburger Menu */
+#hamburger-menu {
+  display: inline-block;
+}
+
+.navbar .navbar-nav {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background-color: #010101;
+  border-top: var(--sekunder solid 1px);
+  border-left: var(--sekunder) solid 1px;
+  width: 15%;
+  height: 100vh;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.navbar .navbar-phone-only {
+  display: inline-block;
+}
+
+.navbar .navbar-extra {
+  margin-left: 70%;
+}
+
+.navbar .navbar-nav.active {
+  right: 0;
+}
+
+.navbar .navbar-nav a {
+  color: var(--primary);
+  display: block;
+  margin: 0.8rem;
+  padding: 0.3rem 1.2rem;
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-nav a:hover {
+  border-bottom: none;
+  font-weight: 700;
+  background-color: var(--primary);
+  border-radius: 30px;
+}
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0.5 0;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5 0);
+}
+
+/* Navbar Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background-color: var(--sekunder);
+  width: 50rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #010101;
+  padding: 1rem;
+  background-color: var(--sekunder);
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: #010101;
+}
+
+/* Landing Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .content {
+  padding-bottom: 20%;
+  margin: 8rem;
+  max-width: 600rem;
+  text-align: left;
+}
+
+.hero .content h1 {
+  margin-top: 7vmax;
+  font-size: 3.5rem;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero .content h1 span {
+  color: #fff;
+}
+
+.hero .content h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+.hero .content h2 span {
+  color: #fff;
+}
+
+.hero .content .garis {
+  max-width: 85vmax;
+  width: 1000%;
+  border-bottom: 3px solid var(--sekunder);
+  margin-top: 1rem;
+}
+
+.hero .content .pertemuan-hero .inline-a {
+  margin-bottom: 1rem;
+}
+
+.hero .content .pertemuan-hero .inline-a .cta {
+  margin: 1rem 0.2rem 0;
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  line-height: 1.3;
+  transition: 0.5s;
+}
+
+.hero .content .pertemuan-hero .inline-a .cta:hover {
+  background-color: #fff;
+  padding: 0.7rem 1.2rem;
+  color: var(--primary);
+  transition: 0.5s;
+}
+
+.hero .content .pertemuan-hero .inline-b .cta {
+  margin: 0 0.2rem 1rem;
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  line-height: 1.3;
+  transition: 0.5s;
+}
+
+.hero .content .pertemuan-hero .inline-b .cta:hover {
+  background-color: #fff;
+  padding: 0.7rem 1.2rem;
+  color: var(--primary);
+  transition: 0.5s;
+}
+
+/* Pertemuan */
+.pertemuan-1,
+.pertemuan-2,
+.pertemuan-3,
+.pertemuan-4,
+.pertemuan-5,
+.pertemuan-6,
+.pertemuan-7,
+.pertemuan-8,
+.pertemuan-9,
+.pertemuan-10,
+.pertemuan-11,
+.pertemuan-12,
+.pertemuan-13,
+.pertemuan-14,
+.pertemuan-15,
+.pertemuan-16 {
+  padding: 5rem 7% 1.4rem;
+}
+
+.pertemuan-1 h1,
+.pertemuan-2 h1,
+.pertemuan-3 h1,
+.pertemuan-4 h1,
+.pertemuan-5 h1,
+.pertemuan-6 h1,
+.pertemuan-7 h1,
+.pertemuan-8 h1,
+.pertemuan-9 h1,
+.pertemuan-10 h1,
+.pertemuan-11 h1,
+.pertemuan-12 h1,
+.pertemuan-13 h1,
+.pertemuan-14 h1,
+.pertemuan-15 h1,
+.pertemuan-16 h1 {
+  text-align: left;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.pertemuan-1 h2,
+.pertemuan-2 h2,
+.pertemuan-3 h2,
+.pertemuan-4 h2,
+.pertemuan-5 h2,
+.pertemuan-6 h2,
+.pertemuan-7 h2,
+.pertemuan-8 h2,
+.pertemuan-9 h2,
+.pertemuan-10 h2,
+.pertemuan-11 h2,
+.pertemuan-12 h2,
+.pertemuan-13 h2,
+.pertemuan-14 h2,
+.pertemuan-15 h2,
+.pertemuan-16 h2 {
+  text-align: left;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.pertemuan-1 h2 span,
+.pertemuan-2 h2 span,
+.pertemuan-3 h2 span,
+.pertemuan-4 h2 span,
+.pertemuan-5 h2 span,
+.pertemuan-6 h2 span,
+.pertemuan-7 h2 span,
+.pertemuan-8 h2 span,
+.pertemuan-9 h2 span,
+.pertemuan-10 h2 span,
+.pertemuan-11 h2 span,
+.pertemuan-12 h2 span,
+.pertemuan-13 h2 span,
+.pertemuan-14 h2 span,
+.pertemuan-15 h2 span,
+.pertemuan-16 h2 span {
+  color: var(--sekunder);
+}
+
+.pertemuan-1 .garis,
+.pertemuan-2 .garis,
+.pertemuan-3 .garis,
+.pertemuan-4 .garis,
+.pertemuan-4 .garis,
+.pertemuan-5 .garis,
+.pertemuan-6 .garis,
+.pertemuan-7 .garis,
+.pertemuan-8 .garis,
+.pertemuan-9 .garis,
+.pertemuan-10 .garis,
+.pertemuan-11 .garis,
+.pertemuan-12 .garis,
+.pertemuan-13 .garis,
+.pertemuan-14 .garis,
+.pertemuan-15 .garis,
+.pertemuan-16 .garis {
+  border-bottom: var(--sekunder) solid 2px;
+}
+
+.pertemuan-1 .content,
+.pertemuan-2 .content,
+.pertemuan-3 .content,
+.pertemuan-4 .content,
+.pertemuan-5 .content,
+.pertemuan-6 .content,
+.pertemuan-7 .content,
+.pertemuan-8 .content,
+.pertemuan-9 .content,
+.pertemuan-10 .content,
+.pertemuan-11 .content,
+.pertemuan-12 .content,
+.pertemuan-13 .content,
+.pertemuan-14 .content,
+.pertemuan-15 .content,
+.pertemuan-16 .content {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+.pertemuan-1 .back,
+.pertemuan-2 .back,
+.pertemuan-3 .back,
+.pertemuan-4 .back,
+.pertemuan-5 .back,
+.pertemuan-6 .back,
+.pertemuan-7 .back,
+.pertemuan-8 .back,
+.pertemuan-9 .back,
+.pertemuan-10 .back,
+.pertemuan-11 .back,
+.pertemuan-12 .back,
+.pertemuan-13 .back,
+.pertemuan-14 .back,
+.pertemuan-15 .back,
+.pertemuan-16 .back {
+  padding: 1.8rem;
+  line-height: 1.2;
+}
+
+.pertemuan-1 .back a,
+.pertemuan-2 .back a,
+.pertemuan-3 .back a,
+.pertemuan-4 .back a,
+.pertemuan-5 .back a,
+.pertemuan-6 .back a,
+.pertemuan-7 .back a,
+.pertemuan-8 .back a,
+.pertemuan-9 .back a,
+.pertemuan-10 .back a,
+.pertemuan-11 .back a,
+.pertemuan-12 .back a,
+.pertemuan-13 .back a,
+.pertemuan-14 .back a,
+.pertemuan-15 .back a,
+.pertemuan-16 .back a {
+  color: #fff;
+  background-color: var(--primary);
+  padding: 1.5rem 1rem 0rem;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.pertemuan-1 .back a:hover,
+.pertemuan-2 .back a:hover,
+.pertemuan-3 .back a:hover,
+.pertemuan-4 .back a:hover,
+.pertemuan-5 .back a:hover,
+.pertemuan-6 .back a:hover,
+.pertemuan-7 .back a:hover,
+.pertemuan-8 .back a:hover,
+.pertemuan-9 .back a:hover,
+.pertemuan-10 .back a:hover,
+.pertemuan-11 .back a:hover,
+.pertemuan-12 .back a:hover,
+.pertemuan-13 .back a:hover,
+.pertemuan-14 .back a:hover,
+.pertemuan-15 .back a:hover,
+.pertemuan-16 .back a:hover {
+  color: var(--primary);
+  background-color: #fff;
+  padding: 1.6rem 1.2rem 0.1rem;
+  transition: 0.3s;
+}
+
+/* Agama Islam -- materi 1-2-3-4-5 START */
+.materi-1-agama-islam h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-agama-islam p,
+.materi-1-agama-islam .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-agama-islam p span {
+  color: var(--primary);
+}
+
+.materi-1-agama-islam .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-agama-islam .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-agama-islam .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+/* Agama Islam -- materi 1-2-3-4-5 END */
+
+/* Aplikasi Komputer Bisnis -- materi 1-2-3-4-5 START */
+.materi-1-aplikasi-komputer-bisnis h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-aplikasi-komputer-bisnis p,
+.materi-1-aplikasi-komputer-bisnis .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-aplikasi-komputer-bisnis p span {
+  color: var(--primary);
+}
+
+.materi-1-aplikasi-komputer-bisnis .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-aplikasi-komputer-bisnis .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-aplikasi-komputer-bisnis .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+
+.feather-24 {
+  width: 22px;
+  height: 40px;
+}
+/* Aplikasi Komputer Bisnis -- materi 1-2-3-4-5 END */
+
+/* Aplikasi Komputer Akuntansi -- materi 1-2-3-4 START */
+.materi-1-aplikasi-komputer-akuntansi h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-aplikasi-komputer-akuntansi p,
+.materi-1-aplikasi-komputer-akuntansi .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-aplikasi-komputer-akuntansi p span {
+  color: var(--primary);
+}
+
+.materi-1-aplikasi-komputer-akuntansi .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-aplikasi-komputer-akuntansi .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-aplikasi-komputer-akuntansi .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+
+.feather-24 {
+  width: 22px;
+  height: 40px;
+}
+/* Aplikasi Komputer Bisnis -- materi 1-2-3-4 END */
+
+/* Bank dan Transaksi Keuangan -- materi 1-2-3-4-5 START */
+.materi-1-bank-dan-transaksi-keuangan h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-bank-dan-transaksi-keuangan p,
+.materi-1-bank-dan-transaksi-keuangan .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-bank-dan-transaksi-keuangan p span {
+  color: var(--primary);
+}
+
+.materi-1-bank-dan-transaksi-keuangan .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-bank-dan-transaksi-keuangan .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-bank-dan-transaksi-keuangan .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+
+.feather-24 {
+  width: 22px;
+  height: 40px;
+}
+/* Bank dan Transaksi Keuangan -- materi 1-2-3-4-5 END */
+
+/* Pengantar Hukum Bisnis -- materi 1-2-3-4 START */
+.materi-1-pengantar-hukum-bisnis h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-pengantar-hukum-bisnis p,
+.materi-1-pengantar-hukum-bisnis .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-pengantar-hukum-bisnis p span {
+  color: var(--primary);
+}
+
+.materi-1-pengantar-hukum-bisnis .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-pengantar-hukum-bisnis .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-pengantar-hukum-bisnis .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+
+.feather-24 {
+  width: 22px;
+  height: 40px;
+}
+/* Pengantar Hukum Bisnis -- materi 1-2-3-4-5 END */
+
+/* Bisnis Digital -- materi 1-2-3-4 START */
+.materi-1-bisnis-digital h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-bisnis-digital p,
+.materi-1-bisnis-digital .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-bisnis-digital p span {
+  color: var(--primary);
+}
+
+.materi-1-bisnis-digital .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-bisnis-digital .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-bisnis-digital .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+
+.feather-24 {
+  width: 22px;
+  height: 40px;
+}
+/* Bisnis Digital -- materi 1-2-3-4-5 END */
+
+/* Praktik Layanan Nasabah -- materi 1-2-3-4-5 START */
+.materi-1-praktik-layanan-nasabah h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-praktik-layanan-nasabah p,
+.materi-1-praktik-layanan-nasabah .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-praktik-layanan-nasabah p span {
+  color: var(--primary);
+}
+
+.materi-1-praktik-layanan-nasabah .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-praktik-layanan-nasabah .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-praktik-layanan-nasabah .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+
+.feather-24 {
+  width: 22px;
+  height: 40px;
+}
+/* Praktik Layanan Nasabah -- materi 1-2-3-4-5 END */
+
+/* Kewirausahaan -- materi 1-2-3-4 START */
+.materi-1-kewirausahaan h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-kewirausahaan p,
+.materi-1-kewirausahaan .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-kewirausahaan p span {
+  color: var(--primary);
+}
+
+.materi-1-kewirausahaan .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-kewirausahaan .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-kewirausahaan .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+
+.feather-24 {
+  width: 22px;
+  height: 40px;
+}
+/* Kewirausahaan -- materi 1-2-3-4 END */
+
+/* Bahasa Inggris -- materi 1-2-3-4-5 START */
+.materi-1-bahasa-inggris h1 {
+  font-size: 1.7rem;
+}
+
+.materi-1-bahasa-inggris p,
+.materi-1-bahasa-inggris .konten a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.materi-1-bahasa-inggris p span {
+  color: var(--primary);
+}
+
+.materi-1-bahasa-inggris .konten {
+  padding-top: 0.3rem;
+}
+
+.materi-1-bahasa-inggris .konten a {
+  color: #fff;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 0 0.8rem;
+  transition: 0.3s;
+}
+
+.materi-1-bahasa-inggris .konten a:hover {
+  color: var(--primary);
+  font-size: 1.7rem;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  transition: 0.3s;
+}
+
+.feather-24 {
+  width: 22px;
+  height: 40px;
+}
+/* Bahasa Inggris -- materi 1-2-3-4-5 END */
+
+/* Footer */
+
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--sekunder);
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+footer .credit p b {
+  color: #fff;
+}
+
+/* Media Quaries */
+/* If kalo dilayar Laptop */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* If kalo dilayar Tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #010101;
+    border-top: var(--sekunder solid 1px);
+    border-left: var(--sekunder) solid 1px;
+    width: 40%;
+    height: 90vh;
+    transition: 0.4s;
+    text-align: center;
+  }
+
+  .navbar .navbar-phone-only {
+    display: inline-block;
+  }
+
+  .navbar .navbar-phone-only h1 {
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-extra {
+    margin-left: 50%;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--primary);
+    display: block;
+    margin: 0.8rem;
+    padding: 0.3rem 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-nav a:hover {
+    border-bottom: none;
+    font-weight: 700;
+    background-color: var(--primary);
+    border-radius: 30px;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0.5 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5 0);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .hero .content {
+    padding-bottom: 20%;
+    margin: 8rem;
+    max-width: 600rem;
+    text-align: left;
+  }
+
+  .hero .content h1 {
+    margin-top: 7vmax;
+    font-size: 3.5rem;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero .content .garis {
+    width: 100%;
+    border-bottom: 3px solid var(--sekunder);
+    margin-top: 1rem;
+  }
+
+  .hero .content .pertemuan-hero {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .hero .content .pertemuan-hero .inline-a {
+    margin-bottom: 1rem;
+  }
+
+  .hero .content .pertemuan-hero .inline-a .cta {
+    margin: 1rem 0.2rem 0;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    line-height: 1.3;
+    transition: 0.5s;
+  }
+
+  .hero .content .pertemuan-hero .inline-a .cta:hover {
+    background-color: #fff;
+    padding: 0.5rem 0.5rem;
+    color: var(--primary);
+    transition: 0.5s;
+  }
+
+  .hero .content .pertemuan-hero .inline-b .cta {
+    margin: 0 0.2rem 1rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    line-height: 1.3;
+    transition: 0.5s;
+  }
+
+  .hero .content .pertemuan-hero .inline-b .cta:hover {
+    background-color: #fff;
+    padding: 0.5rem 0.5rem;
+    color: var(--primary);
+    transition: 0.5s;
+  }
+
+  .pertemuan-1 .back,
+  .pertemuan-2 .back,
+  .pertemuan-3 .back,
+  .pertemuan-4 .back,
+  .pertemuan-5 .back,
+  .pertemuan-6 .back,
+  .pertemuan-7 .back,
+  .pertemuan-8 .back,
+  .pertemuan-9 .back,
+  .pertemuan-10 .back,
+  .pertemuan-11 .back,
+  .pertemuan-12 .back,
+  .pertemuan-13 .back,
+  .pertemuan-14 .back,
+  .pertemuan-15 .back,
+  .pertemuan-16 .back {
+    padding: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .pertemuan-1 .back a,
+  .pertemuan-2 .back a,
+  .pertemuan-3 .back a,
+  .pertemuan-4 .back a,
+  .pertemuan-5 .back a,
+  .pertemuan-6 .back a,
+  .pertemuan-7 .back a,
+  .pertemuan-8 .back a,
+  .pertemuan-9 .back a,
+  .pertemuan-10 .back a,
+  .pertemuan-11 .back a,
+  .pertemuan-12 .back a,
+  .pertemuan-13 .back a,
+  .pertemuan-14 .back a,
+  .pertemuan-15 .back a,
+  .pertemuan-16 .back a {
+    color: #fff;
+    background-color: var(--primary);
+    padding: 2rem 1rem 0rem;
+    border-radius: 12px;
+    transition: 0.3s;
+  }
+
+  .pertemuan-1 .back a:hover,
+  .pertemuan-2 .back a:hover,
+  .pertemuan-3 .back a:hover,
+  .pertemuan-4 .back a:hover,
+  .pertemuan-5 .back a:hover,
+  .pertemuan-6 .back a:hover,
+  .pertemuan-7 .back a:hover,
+  .pertemuan-8 .back a:hover,
+  .pertemuan-9 .back a:hover,
+  .pertemuan-10 .back a:hover,
+  .pertemuan-11 .back a:hover,
+  .pertemuan-12 .back a:hover,
+  .pertemuan-13 .back a:hover,
+  .pertemuan-14 .back a:hover,
+  .pertemuan-15 .back a:hover,
+  .pertemuan-16 .back a:hover {
+    color: var(--primary);
+    background-color: #fff;
+    padding: 2.1rem 1.2rem 0.1rem;
+    transition: 0.3s;
+  }
+
+  .feather-24 {
+    width: 22px;
+    height: 25px;
+  }
+}
+
+/* If kalo dilayar Mobile */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Custom Scroll Bar */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(37, 36, 36, 0.5);
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), var(--sekunder));
+  border-radius: 10px;
+}

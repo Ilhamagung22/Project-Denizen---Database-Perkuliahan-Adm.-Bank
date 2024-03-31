@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MATERI SEMESTER 2</title>
+
+    <!-- Fonts kita -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icon -->
+    <link rel="icon" href="img/Logo Bank.png">
+    
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div id="MyClockDisplay" class="navbar-jam" onload="showTime()"></div>
+
+      <div class="navbar-nav">
+        <div class="navbar-phone-only">
+          <h1>Main Menu</h1>
+        </div>
+        <a href="#">Home</a>
+        <a href="#matkul">Mata Kuliah</a>
+        <a href="#tugas">Tugas</a>
+        <a href="#kalender">Kalender</a>
+        <a href="#profile">Profil</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
+        <a href="/index.html" id="log-out"><i data-feather="log-out"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Logo Search Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Logo Search End -->
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Landing Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Selamat Datang</h1>
+        <h2>di Database Perkuliahan Adm. Bank</h2>
+        <h2>Semester 2</h2>
+        <div class="garis"></div>
+        <a href="#matkul" class="cta">Mata Kuliah</a>
+        <a href="#tugas" class="cta">List Tugas</a>
+      </main>
+    </section>
+    <!-- Landing Section End -->
+
+    <!-- Mata Kuliah Section Start -->
+    <section id="matkul" class="matkul">
+      <h1>Mata Kuliah</h1>
+      <h2>Silahkan Pilih Mata Kuliah yang Ingin Anda Lihat</h2>
+
+      <div class="row">
+        <div class="matkul-card">
+          <a href="matkul/agama-islam.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Agama Islam.png"
+              alt="Agama Islam"
+              class="matkul-card-img"
+          /></a>
+          <a href="matkul/aplikasi-komputer-akuntansi.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Aplikasi Komputer Akuntansi.png"
+              alt="Aplikasi Komputer Akuntansi"
+              class="matkul-card-img"
+          /></a>
+          <a href="matkul/aplikasi-komputer-bisnis.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Aplikasi Komputer Bisnis.png"
+              alt="Aplikasi Komputer Bisnis"
+              class="matkul-card-img"
+          /></a>
+          <a href="matkul/bahasa-inggris.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Bahasa Inggris.png"
+              alt="Bahasa Inggris"
+              class="matkul-card-img"
+          /></a>
+          <a href="matkul/bank-dan-transaksi-keuangan.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Bank dan Transaksi Keuangan.png"
+              alt="Bank dan Transaksi Keuangan"
+              class="matkul-card-img"
+          /></a>
+          <a href="matkul/bisnis-digital.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Bisnis Digital.png"
+              alt="Bisnis Digital"
+              class="matkul-card-img"
+          /></a>
+          <a href="matkul/kewirausahaan.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Kewirausahaan.png"
+              alt="Kewirausahaan"
+              class="matkul-card-img"
+          /></a>
+          <a href="matkul/pengantar-hukum-bisnis.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Pengantar Hukum Bisnis.png"
+              alt="Pengantar Hukum Bisnis"
+              class="matkul-card-img"
+          /></a>
+          <a href="matkul/praktik-layanan-nasabah.html"
+            ><img
+              src="img/Foto Matkul Semester 2/Praktik Layanan Nasabah.png"
+              alt="Praktik Layanan Nasabah"
+              class="matkul-card-img"
+          /></a>
+        </div>
+      </div>
+    </section>
+    <!-- Mata Kuliah Section End -->
+
+    <!-- List Tugas Section Start -->
+    <section id="tugas" class="tugas">
+      <h1>List Tugas</h1>
+      <h2>Berikut Adalah Tugas Yang Tersedia Saat Ini (*Di Refresh Setiap Hari Jam 23.00)</h2>
+
+      <div class="row">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Nama Matkul..">
+        
+        <table id="myTable">
+          <tr class="header">
+            <th style="width: 8rem; border-top-left-radius: 12px;">Nama Matkul</th>
+            <th style="width: 20rem;">Tugas</th>
+            <th style="width: 8rem; border-top-right-radius: 12px;">Deadline</th>
+          </tr>
+
+
+
+          <tr class="">
+            <td style="width: 25%;">Praktik Layanan Nasabah</td>
+            <td style="width: 50%; text-align: left;">Sosialisasi Jurusan Perbankan</td>
+            <td style="width: 25%;">Jumat, 19 April 2024</td>
+          </tr>
+          <tr class="">
+            <td style="width: 25%;">Kewirausahaan</td>
+            <td style="width: 50%; text-align: left;"> Outlook dan Design Thinking > Lembar Kerja 05 Kelompok</td>
+            <td style="width: 25%;">Selasa, 26 Maret 2024</td>
+          </tr>
+          <tr class="">
+            <td style="width: 25%;">Praktik Layanan Nasabah</td>
+            <td style="width: 50%; text-align: left;">Mengumpulkan Hasil Praktik Pembukaan Rekening</td>
+            <td style="width: 25%;">Minggu, 24 Maret 2024</td>
+          </tr>
+          <tr class="">
+            <td style="width: 25%;">Bahasa Inggris</td>
+            <td style="width: 50%; text-align: left;">Group Project : Running A Meeting & Roleplay</td>
+            <td style="width: 25%;">Jumat, 22 Maret 2024</td>
+          </tr>
+          <tr class="">
+            <td>Praktik Layanan Nasabah</td>
+            <td style="text-align: left;">Role Play : Customer Service Bank</td>
+            <td>Rabu, 20 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Bank & Transaksi Keuangan</td>
+            <td style="text-align: left;">Mendefinisikan dan Mencari Contoh Jenis-Jenis Bank</td>
+            <td>Senin, 18 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Pengantar Hukum Bisnis</td>
+            <td style="text-align: left;">Membuat Makalah Mengenai Kajian Hukum OJK > Kelompok</td>
+            <td>Minggu, 17 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Agama Islam</td>
+            <td style="text-align: left;">Membuat LTM untuk VTR Dr. Abdul Moqsith Ghazali</td>
+            <td>Minggu, 17 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Kewirausahaan</td>
+            <td style="text-align: left;">Evaluation With DMA and PCA > Lembar Kerja 04 Kelompok</td>
+            <td>Rabu, 13 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Agama Islam</td>
+            <td style="text-align: left;">Membuat LTM 5 untuk VTR Dr. Abdul Moqsith Ghazali</td>
+            <td>Minggu, 10 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Pengantar Hukum Bisnis</td>
+            <td style="text-align: left;">Membuat Makalah Permasalahan Dalam Koperasi > Kelompok</td>
+            <td>Kamis, 7 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Pengantar Hukum Bisnis</td>
+            <td style="text-align: left;">Membuat PPT Mengenai Aspek Hukum Badan Usaha > Individu</td>
+            <td>Kamis, 7 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Kewirausahaan</td>
+            <td style="text-align: left;">E-CV Action Plan > Lembar Kerja 02 : Lanjutan Mandiri</td>
+            <td>Rabu, 6 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Kewirausahaan</td>
+            <td style="text-align: left;">Generating Idea > Lembar Kerja 03 Mandiri</td>
+            <td>Minggu, 3 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Agama Islam</td>
+            <td style="text-align: left;">Membuat LTM 4 untuk VTR Dr. Abdi Kurnia</td>
+            <td>Minggu, 3 Maret 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Pengantar Hukum Bisnis</td>
+            <td style="text-align: left;">Membentuk Naskah Kontrak Bisnis > Individu</td>
+            <td>Rabu, 28 Februari 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Kewirausahaan</td>
+            <td style="text-align: left;">Pembentukan kelompok > Lembar Kerja 02 Kelompok</td>
+            <td>Selasa, 27 Februari 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Aplikasi Kompter Bisnis</td>
+            <td style="text-align: left;">Membuat Mail Merge pada Microsoft Word</td>
+            <td>Selasa, 27 Februari 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Kewirausahaan</td>
+            <td style="text-align: left;">Self Discovery > Lembar Kerja 02 Mandiri</td>
+            <td>Minggu, 25 Februari 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Agama Islam</td>
+            <td style="text-align: left;">Membuat LTM 3 untuk VTR Dr. Nur Rofiah</td>
+            <td>Minggu, 25 Februari 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Kewirausahaan</td>
+            <td style="text-align: left;">Finding Role Model > Lembar Kerja 01 Mandiri</td>
+            <td>Minggu, 18 Februari 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Agama Islam</td>
+            <td style="text-align: left;">Membuat LTM 2 untuk VTR Dr. Nur Rofiah</td>
+            <td>Minggu, 18 Februari 2024</td>
+          </tr>
+          <tr class="post-deadline">
+            <td>Agama Islam</td>
+            <td style="text-align: left;"><del>Membuat LTM 1 VTR KH. Dr. Zakky</del></td>
+            <td>Minggu, 11 Februari 2024</td>
+          </tr>
+          
+        </table>
+      </div>
+    </section>
+    <!-- List Tugas Section End -->
+
+    <!-- Kalender Section Start --> 
+    <section id="kalender" class="kalender">
+      <h1>Kalender</h1>
+      <h2>Berikut Kalender Perkuliahan Yang Akan Mendatang</h2>
+
+      <div class="konten-kalender" align="center">
+        <iframe src="https://embed.styledcalendar.com/#G0aJGJze04YlPBkSHt40" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+        <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+      </div>
+    </section>
+    <!-- Kalender Section End --> 
+
+    <!-- Profile Section Start -->
+    <section id="profile" class="profile">
+      <h1>Profile</h1>
+      <h2>
+        Berikut Profile dari Ilham yang Sangat Murah Hati Sehingga Mau Membuat
+        Web Ini
+      </h2>
+
+      <div class="row">
+        <div class="profile-img">
+          <img src="img/foto satu (1).jpg" alt="Ilham sang Pembuat" />
+        </div>
+        <div class="content">
+          <h3>Nama : <span>Ilham Agung Pangestu</span></h3>
+          <h3>NPM : <span>2306223660</span></h3>
+          <h3>Fakultas : <span>Program Vokasi</span></h3>
+          <h3>Prodi : <span>D3 Administrasi Keuangan dan Perbankan</span></h3>
+          <div class="content-hobi">
+            <h3>
+              Hobi :
+              <span
+                >Ngoding, Ngegame, Rebahan, Makan, Tidur, Masak, Tidur
+                Lagi</span
+              >
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Profile Section End -->
+
+    <!-- Kontak Section Start -->
+    <section id="contact" class="contact">
+      <h1>Kontak</h1>
+      <h2>
+        Kalo Mau Dateng Main ke Asrama Bolehh, atau Mau Sekedar Chat Aja Juga
+        Bisaa
+      </h2>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3532006896485!2d106.82705677573284!3d-6.348292262110035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed852f40069f%3A0x66bc7859aef72990!2sAsrama%20UI%20Depok!5e0!3m2!1sid!2sid!4v1703084496199!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <div class="content">
+          <h3>Lokasi (Diluar jam kuliah, Sabtu, dan Minggu): <span>Asrama UI Depok</span></h3>
+          <h3>Lokasi (Di Jam Kuliah): <span>Gedung VC Vokasi</span></h3>
+          <br>
+          <h3>No. Whatsapp : <span>085172248050</span></h3>
+          <h3>Line : <span>@ilham.ap22</span></h3>
+          <h3>Instagram : <span>@ilham.agungp22</span></h3>
+          <h3>Email : <span>ilham.agungp22@gmail.com</span></h3>
+          <h3>Gopay : <span>08517228050 (Ilham Agung Pangestu)</span></h3>
+        </div>
+    </section>
+    <!-- Kontak Section End -->
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="socials">
+        <a href="https://api.whatsapp.com/send/?phone=%2B6285172248050&text&type=phone_number&app_absent=0"
+          ><i data-feather="send"></i
+        ></a>
+        <a href="https://play.google.com/store/apps/details?id=jp.naver.line.android&pli=1"
+          ><i data-feather="message-circle"></i
+        ></a>
+        <a href="https://www.instagram.com/ilham.agungp22/"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=jrjtXGjnJGtPFTzkrZqNrSMvVJMcQVXBNxGzGSzkHPKgjjDDvnmBCSGwwZJQcRCqTxLwFxvd"
+          ><i data-feather="mail"></i
+        ></a>
+        <a href="https://play.google.com/store/apps/details?id=com.gojek.gopay"
+          ><i data-feather="dollar-sign"></i
+        ></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#matkul">|</a>
+        <a href="#matkul">Mata Kuliah</a>
+        <a href="#profile">|</a>
+        <a href="#profile">Profil</a>
+        <a href="#contact">|</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="credit">
+        <p>
+          Created by <b>Ilham Agung Pangestu yang Rendah Hati dan Dermawan</b> |
+          &copy; 2023
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feaher Icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- JavaScript bukan Java Ygy-->
+    <script src="javascript.js"></script>
+  </body>
+</html>
