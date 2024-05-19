@@ -118,3 +118,117 @@ function myFunction() {
     }
   }
 }
+
+// Experimen bikin coundown tugas aja
+document.addEventListener("DOMContentLoaded", function () {
+  const tasks = [
+    {
+      course: "Kewirausahaan",
+      task: "Presentasi Pitching di Auditorium",
+      deadline: "2024-06-10T08:00:00",
+    },
+    {
+      course: "Aplikasi Komputer Akuntansi",
+      task: "Membuat Makalah Akuntansi Mengenai Analisis Pasar LQ-45",
+      deadline: "2024-06-07T23:59:59",
+    },
+    {
+      course: "Bahasa Inggris",
+      task: "Project UAS: Membuat Video Individu",
+      deadline: "2024-06-07T23:59:59",
+    },
+    {
+      course: "Kewirausahaan",
+      task: "Mengumpulkan Screenshot Komentar Video Latihan Teknik Presentasi",
+      deadline: "2024-06-06T23:54:59",
+    },
+    {
+      course: "Praktik Layanan Nasabah",
+      task: "Ujian Praktik Role Play",
+      deadline: "2024-06-05T08:00:00",
+    },
+    {
+      course: "Bahasa Inggris",
+      task: "Quiz 2 dan Konsultasi Project UAS",
+      deadline: "2024-05-31T23:59:59",
+    },
+    {
+      course: "Agama Islam",
+      task: "Membuat LTM 13 Mengenai Islam dan Perempuan",
+      deadline: "2024-05-26T23:59:59",
+    },
+    {
+      course: "Kewirausahaan",
+      task: "Mengumpulkan Video dan Pitchdeck Kelompok",
+      deadline: "2024-05-26T23:59:59",
+    },
+    {
+      course: "Kewirausahaan",
+      task: "Mengumpulkan Proposal Bisnis yang Disempurnakan",
+      deadline: "2024-05-25T00:00:00",
+    },
+    {
+      course: "Bahasa Inggris",
+      task: "Mengumpulkan Laporan Tertulis Project UAS",
+      deadline: "2024-05-24T23:59:59",
+    },
+    {
+      course: "Kewirausahaan",
+      task: "Mengumpulkan Screenshot Komentar Video Public Speaking",
+      deadline: "2024-05-24T23:54:00",
+    },
+    {
+      course: "Kewirausahaan",
+      task: "Mengumpulkan Lembar Kerja 8 ERRC dan Business Model Canvas",
+      deadline: "2024-05-23T23:55:00",
+    },
+    {
+      course: "Bank dan Transaksi Keuangan",
+      task: "Quiz 2 dan Presentasi Kelompok Tambahan",
+      deadline: "2024-05-21T08:00:00",
+    },
+    {
+      course: "Agama Islam",
+      task: "Membuat LTM 12 Mengenai Islam dan Media di Era Post-Truth",
+      deadline: "2024-05-19T23:59:59",
+    },
+
+    // Tambahkan tugas lainnya di sini
+  ];
+
+  const taskList = document.getElementById("taskList");
+
+  tasks.forEach((task) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+          <td>${task.course}</td>
+          <td>${task.task}</td>
+          <td id="${task.task}-countdown"></td>
+      `;
+    taskList.appendChild(row);
+
+    updateCountdown(task, row);
+    setInterval(() => updateCountdown(task, row), 1000);
+  });
+
+  function updateCountdown(task, row) {
+    const countdownElement = document.getElementById(`${task.task}-countdown`);
+    const deadline = new Date(task.deadline).getTime();
+    const now = new Date().getTime();
+    const distance = deadline - now;
+
+    if (distance < 0) {
+      row.classList.add("completed");
+      countdownElement.textContent = "Deadline Passed";
+    } else {
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.textContent = `${days} Hari ${hours} Jam ${minutes} Menit`;
+    }
+  }
+});

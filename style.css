@@ -276,70 +276,73 @@ body {
   transition: 0.1s linear;
 }
 
-/* List Tugas Section */
+/* Experimen bikin countdown */
 
-.tugas .row {
-  display: flex;
-  flex-wrap: wrap;
+.container-tugas {
+  max-width: 100rem;
+  margin: 0 auto;
+  text-align: center;
   margin-top: 3rem;
-  justify-content: center;
 }
 
-#myInput {
+table {
   width: 100%;
-  font-size: 1.5rem;
-  color: #fff;
-  padding: 15px 15px 12px 10px;
-  border: 0px solid #ddd;
-  margin-bottom: 0.5rem;
-  background-color: var(--primary);
-  border-radius: 12px;
-}
-
-::placeholder {
-  color: #fff;
-  font-weight: 1.5rem;
-}
-
-#myInput placeholder {
-  color: var(--sekunder);
-}
-
-#myTable {
   border-collapse: collapse;
-  width: 100%;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  padding: 0.5rem;
   border: 0px solid #ddd;
-  font-size: 1.5rem;
-  border-radius: 12px;
-}
-
-#myTable th {
   text-align: center;
-  padding: 0.5rem 0;
+  color: var(--sekunder);
+  font-size: 1.4rem;
+  margin: 3rem 7% 2rem;
 }
 
-#myTable td {
-  text-align: center;
-  padding: 0.1rem 1rem;
+th {
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1.4rem;
 }
 
-#myTable tr {
-  border-bottom: 1px solid #ddd;
+td:nth-child(2) {
+  text-align: left;
 }
 
-#myTable tr.header,
-#myTable tr:hover {
-  background-color: #fff;
+th:not(:last-child) {
+  border-right: 1px solid #fff;
 }
 
-#myTable tr .countdown {
-  display: flex;
+td:not(:last-child) {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
 }
 
-.post-deadline {
-  opacity: 0.5;
-  text-decoration: line-through;
+td:nth-child(3) {
+  border-top: 1px solid #fff;
 }
+
+th:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+
+th:nth-child(3) {
+  border-top-right-radius: 10px;
+}
+
+.completed {
+  text-decoration: line-through 5px solid;
+  color: red;
+  -webkit-filter: grayscale(50%);
+}
+
+tbody tr:hover {
+  background-color: #505050; /* Change the background color on hover */
+}
+
+/* Experimen bikin countdown */
 
 /* Profile Section */
 
@@ -395,7 +398,7 @@ body {
 
 .konten-kalender iframe {
   margin-top: 3rem;
-  border-radius: 24px;
+  border-radius: 10px;
 }
 
 /* Kontak Section */
