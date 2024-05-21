@@ -153,6 +153,11 @@ document.addEventListener("DOMContentLoaded", function () {
       deadline: "2024-05-31T23:59:59",
     },
     {
+      course: "Bank dan Transaksi Keuangan",
+      task: "Quiz 2 dan Presentasi Kelompok Tambahan",
+      deadline: "2024-05-28T08:00:00",
+    },
+    {
       course: "Agama Islam",
       task: "Membuat LTM 13 Mengenai Islam dan Perempuan",
       deadline: "2024-05-26T23:59:59",
@@ -181,11 +186,6 @@ document.addEventListener("DOMContentLoaded", function () {
       course: "Kewirausahaan",
       task: "Mengumpulkan Lembar Kerja 8 ERRC dan Business Model Canvas",
       deadline: "2024-05-23T23:55:00",
-    },
-    {
-      course: "Bank dan Transaksi Keuangan",
-      task: "Quiz 2 dan Presentasi Kelompok Tambahan",
-      deadline: "2024-05-21T08:00:00",
     },
     {
       course: "Agama Islam",
