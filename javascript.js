@@ -200,11 +200,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tasks.forEach((task) => {
     const row = document.createElement("tr");
+
+    // Format due date
+    const deadlineDate = new Date(task.deadline);
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    const formattedDeadline = `Due date: ${deadlineDate.toLocaleDateString(
+      "id-ID",
+      options
+    )}`;
+
     row.innerHTML = `
-          <td>${task.course}</td>
-          <td>${task.task}</td>
-          <td id="${task.task}-countdown"></td>
-      `;
+            <td>${task.course}</td>
+            <td>${task.task}<span class="due-date">${formattedDeadline}</span></td>
+            <td id="${task.task}-countdown"></td>
+        `;
     taskList.appendChild(row);
 
     updateCountdown(task, row);

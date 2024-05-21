@@ -342,6 +342,26 @@ tbody tr:hover {
   background-color: #505050; /* Change the background color on hover */
 }
 
+.due-date {
+  display: block;
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 5px;
+}
+
+tbody tr {
+  border-top: 5px double #fff; /* Double line on top */
+  border-bottom: 5px double #fff; /* Double line on bottom */
+}
+
+tbody tr:first-child {
+  border-top: none; /* Remove top border from the first row */
+}
+
+tbody tr:last-child {
+  border-bottom: none; /* Remove bottom border from the last row */
+}
+
 /* Experimen bikin countdown */
 
 /* Profile Section */
