@@ -153,6 +153,16 @@ document.addEventListener("DOMContentLoaded", function () {
       deadline: "2024-05-31T23:59:59",
     },
     {
+      course: "Pengantar Hukum Bisnis",
+      task: "Tugas Pribadi > Membuat Makalah Mengenai Undang-Undang",
+      deadline: "2024-05-29T12:00:00",
+    },
+    {
+      course: "Aplikasi Komputer Akuntansi",
+      task: "Praktik Zahir Pertemuan 15 | Rabu, 23 Mei 2024",
+      deadline: "2024-05-28T08:00:00",
+    },
+    {
       course: "Bank dan Transaksi Keuangan",
       task: "Quiz 2 dan Presentasi Kelompok Tambahan",
       deadline: "2024-05-28T08:00:00",
