@@ -153,6 +153,11 @@ document.addEventListener("DOMContentLoaded", function () {
       deadline: "2024-05-31T23:59:59",
     },
     {
+      course: "Bahasa Inggris",
+      task: "Mengumpulkan Laporan Tertulis Project UAS pada Tugas Written Report",
+      deadline: "2024-05-31T23:59:59",
+    },
+    {
       course: "Pengantar Hukum Bisnis",
       task: "Tugas Pribadi > Membuat Makalah Mengenai Undang-Undang",
       deadline: "2024-05-29T12:00:00",
@@ -184,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       course: "Bahasa Inggris",
-      task: "Mengumpulkan Laporan Tertulis Project UAS",
+      task: "Membuat Email pada Tugas Emailing Task",
       deadline: "2024-05-24T23:59:59",
     },
     {
