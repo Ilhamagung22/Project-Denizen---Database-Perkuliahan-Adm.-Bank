@@ -123,89 +123,9 @@ function myFunction() {
 document.addEventListener("DOMContentLoaded", function () {
   const tasks = [
     {
-      course: "Kewirausahaan",
-      task: "Presentasi Pitching di Auditorium",
-      deadline: "2024-06-10T08:00:00",
-    },
-    {
-      course: "Aplikasi Komputer Akuntansi",
-      task: "Membuat Makalah Akuntansi Mengenai Analisis Pasar LQ-45",
-      deadline: "2024-06-07T23:59:59",
-    },
-    {
-      course: "Bahasa Inggris",
-      task: "Project UAS: Membuat Video Individu",
-      deadline: "2024-06-07T23:59:59",
-    },
-    {
-      course: "Kewirausahaan",
-      task: "Mengumpulkan Screenshot Komentar Video Latihan Teknik Presentasi",
-      deadline: "2024-06-06T23:54:59",
-    },
-    {
-      course: "Praktik Layanan Nasabah",
-      task: "Ujian Praktik Role Play",
-      deadline: "2024-06-05T08:00:00",
-    },
-    {
-      course: "Bahasa Inggris",
-      task: "Quiz 2 dan Konsultasi Project UAS",
-      deadline: "2024-05-31T23:59:59",
-    },
-    {
-      course: "Bahasa Inggris",
-      task: "Mengumpulkan Laporan Tertulis Project UAS pada Tugas Written Report",
-      deadline: "2024-05-31T23:59:59",
-    },
-    {
-      course: "Pengantar Hukum Bisnis",
-      task: "Tugas Pribadi > Membuat Makalah Mengenai Undang-Undang",
-      deadline: "2024-05-29T12:00:00",
-    },
-    {
-      course: "Aplikasi Komputer Akuntansi",
-      task: "Praktik Zahir Pertemuan 15 | Rabu, 23 Mei 2024",
-      deadline: "2024-05-28T08:00:00",
-    },
-    {
-      course: "Bank dan Transaksi Keuangan",
-      task: "Quiz 2 dan Presentasi Kelompok Tambahan",
-      deadline: "2024-05-28T08:00:00",
-    },
-    {
-      course: "Agama Islam",
-      task: "Membuat LTM 13 Mengenai Islam dan Perempuan",
-      deadline: "2024-05-26T23:59:59",
-    },
-    {
-      course: "Kewirausahaan",
-      task: "Mengumpulkan Video dan Pitchdeck Kelompok",
-      deadline: "2024-05-26T23:59:59",
-    },
-    {
-      course: "Kewirausahaan",
-      task: "Mengumpulkan Proposal Bisnis yang Disempurnakan",
-      deadline: "2024-05-25T00:00:00",
-    },
-    {
-      course: "Bahasa Inggris",
-      task: "Membuat Email pada Tugas Emailing Task",
-      deadline: "2024-05-24T23:59:59",
-    },
-    {
-      course: "Kewirausahaan",
-      task: "Mengumpulkan Screenshot Komentar Video Public Speaking",
-      deadline: "2024-05-24T23:54:00",
-    },
-    {
-      course: "Kewirausahaan",
-      task: "Mengumpulkan Lembar Kerja 8 ERRC dan Business Model Canvas",
-      deadline: "2024-05-23T23:55:00",
-    },
-    {
-      course: "Agama Islam",
-      task: "Membuat LTM 12 Mengenai Islam dan Media di Era Post-Truth",
-      deadline: "2024-05-19T23:59:59",
+      course: "[MATKUL]",
+      task: "[KETERANGAN TUGAS]",
+      deadline: "2024-08-31T23:59:59",
     },
 
     // Tambahkan tugas lainnya di sini
